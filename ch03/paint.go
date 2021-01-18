@@ -26,7 +26,7 @@ func main() {
 	amount, err := paintNeeded(5.2, 3.5)
 	failOnError(err)
 	fmt.Printf("%0.2f liters needed\n", amount)
-	amount, err = paintNeeded(4.2, -3.0)
+	amount, err = paintNeeded(4.2, 3.0)
 	failOnError(err)
 	fmt.Printf("%0.2f liters needed\n", amount)
 }
