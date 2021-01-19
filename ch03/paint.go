@@ -16,7 +16,11 @@ func paintNeeded(width float64, height float64) (float64, error) {
 	return area / 10.0, nil
 }
 
+<<<<<<< HEAD
 func failOnError(err error)  {
+=======
+func failOnError(err error) {
+>>>>>>> c12b16f2ae0cd4ba51abb68add990023d6354c04
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -26,7 +30,11 @@ func main() {
 	amount, err := paintNeeded(5.2, 3.5)
 	failOnError(err)
 	fmt.Printf("%0.2f liters needed\n", amount)
+<<<<<<< HEAD
 	amount, err = paintNeeded(4.2, -3.0)
+=======
+	amount, err = paintNeeded(4.2, 3.0)
+>>>>>>> c12b16f2ae0cd4ba51abb68add990023d6354c04
 	failOnError(err)
 	fmt.Printf("%0.2f liters needed\n", amount)
 }
