@@ -9,6 +9,6 @@ func greeting(greetingChannel chan string) {
 func main() {
 	greetingChannel := make(chan string)
 	go greeting(greetingChannel)
-	receivedValue := <-greetingChannel
+	receivedValue := <- greetingChannel
 	fmt.Println(receivedValue)
 }
