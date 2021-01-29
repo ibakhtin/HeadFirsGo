@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"time"
 )
 
 func responseSize(url string) {
@@ -24,7 +25,8 @@ func responseSize(url string) {
 }
 
 func main() {
-	responseSize("https://duckduckgo.com")
-	responseSize("https://google.com")
-	responseSize("https://ya.ru")
+	go responseSize("https://duckduckgo.com")
+	go responseSize("https://google.com")
+	go responseSize("https://ya.ru")
+	time.Sleep(5 * time.Second)
 }
